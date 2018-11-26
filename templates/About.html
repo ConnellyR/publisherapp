@@ -1,3 +1,9 @@
+{%extends "layout.html"%}
+{%set active_page="home"%}
+
+  {% block title%}home{%endblock%}
+
+    {% block content%}
 <h1> About the Publisher Data </h1>
 <p> This data contains information about Amazon's ebooks. Some of this information is the genre of the book,
  the publisher, the book's rank, the book's revenue. The data was created in 2015 and records 54,000 ebooks, 
@@ -7,3 +13,5 @@
 <p> Each book has its own set of data, but in that set there is not the book's title or the author.
  Instead it is organized by five categories, genre, publisher, sold by, statistics, and daily. 
  Statistics and daily have sub-categories</p>
+
+    {%endblock%}
