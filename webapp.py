@@ -6,7 +6,7 @@ app = Flask(__name__)
 def render_main():
     return render_template('about.html')
 
-@app.route("/first")
+@app.route("/rank")
 def render_page1():
     return render_template('rank.html')
     
