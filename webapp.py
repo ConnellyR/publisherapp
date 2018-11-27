@@ -1,9 +1,12 @@
 from flask import Flask, url_for, render_template
-
+import os
+import json
 app = Flask(__name__)
 
 @app.route("/")
 def render_main():
+     with open('publisher.json') as publisher_data:
+        books = json.load(publisher_data)
     return render_template('about.html')
 
 @app.route("/rank")
