@@ -9,7 +9,7 @@ def render_main():
 
 @app.route("/rank")
 def render_page1():
-    with open('publisher.json') as publisher_data:
+    with open('publishers.json') as publisher_data:
         allbooks = json.load(publisher_data)
     return render_template('rank.html')
    
