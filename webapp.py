@@ -20,7 +20,7 @@ def get_rank_options(allbooks):
             myList.append(book[ "statistics"]["sales rank"] )
     options=""
     for ranks in myList:
-        options += Markup("<option value=\"" + ranks + "\">" + ranks + "</option>")
+        options += Markup("<option value=\"" + str(ranks) + "\">" + str(ranks) + "</option>")
     return options
 if __name__=="__main__":
     app.run(debug=False, port=54321)
