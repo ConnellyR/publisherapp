@@ -11,9 +11,9 @@ def render_main():
 def render_page1():
     with open('publishers.json') as publisher_data:
         allbooks = json.load(publisher_data)
-    return render_template('rank.html', )
+    return render_template('rank.html', options=get_rank_options(allbooks))
    
-def get_rank_options(books):
+def get_rank_options(allbooks):
     myList=[]
     for book in allbooks:
         if not book[ "statistics"]["sales rank"] in myList:
