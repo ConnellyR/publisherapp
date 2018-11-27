@@ -11,7 +11,7 @@ def render_main():
 def render_page1():
     with open('publishers.json') as publisher_data:
         allbooks = json.load(publisher_data)
-    return render_template('rank.html')
+    return render_template('rank.html', )
    
 def get_rank_options(books):
     myList=[]
