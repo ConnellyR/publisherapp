@@ -16,8 +16,8 @@ def render_page1():
 def get_rank_options(books):
     myList=[]
     for book in allbooks:
-        if not book["sales rank"] in myList:
-            myList.append(book["sales rank"] )
+        if not book[ "statistics"]["sales rank"] in myList:
+            myList.append(book[ "statistics"]["sales rank"] )
     options=""
     for ranks in myList:
         options += Markup("<option value=\"" + ranks + "\">" + ranks + "</option>")
