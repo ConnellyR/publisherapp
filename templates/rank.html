@@ -4,18 +4,19 @@
 {% block title%}rank{%endblock%}
 
     {% block content%}
- <h1>Data by Show</h1>
+ <h1>Data by Book Rank</h1>
 
 <body>
-<form action="/rank">
-  <select name="rank">
-   {{options}}
-   
-  </select>
-  <br><br>
-  <input type="submit">
-</form>
+    <form action="/rank">
+      <select name="rank">
+       {{options}}
+       
+      </select>
+      <br><br>
+      <input type="submit">
+    </form>
+    {{fact}} 
 
-     
+         
 </body>
     {%endblock%}
