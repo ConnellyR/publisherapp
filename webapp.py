@@ -31,4 +31,4 @@ def fact(rank):
             print( book[ "statistics"]["sales rank"])
             return Markup(str(book [ "statistics"]["sale price"]) +  "sale price" + "<br>" + str( book [ "statistics"]["total reviews"]) + "total reviews" +"<br>" + str( book [ "statistics"]["average rating"]) + "average rating"+"<br>" + str( book[ "daily"]["publisher revenue"]+ "publisher revenue"+ "<br>" + str( book[ "daily"]["amazon revenue"]+ "amazon revenue"+ "<br>" + str( book[ "daily"]["author revenue"]+ "author revenue"+ "<br>" + str( book[ "daily"]["units sold"]+ "units sold" + "<br>" + str( book[ "daily"]["gross sales"]+ "gross sales")
 if __name__=="__main__":
-    app.run(debug=True, port=54321)
+    app.run(debug=False, port=54321)
