@@ -24,7 +24,6 @@ def get_rank_options(allbooks):
     for ranks in myList:
         options += Markup("<option value=\"" + str(ranks) + "\">" + str(ranks) + "</option>")
     return options
-
 def fact(rank):
     for  book in allbooks:
         if book[ "statistics"]["sales rank"] == int(rank):
