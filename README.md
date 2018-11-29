@@ -3,6 +3,8 @@
 MVP
 about the data page and page with nav bar that list ranking once click it shows book genre, sale price,total reviews, rating,publisher revenue, amazon revenue,author revenue,units sold ,gross sales
 
+next make if statement that checks how many genres there are then make list that seperates the genres and put books in then. if book's genre matches put in list if not move on to check not part of if statement that will have it check the other list for a match ,then tally up how many and make graph , pie so can see how much that genre takes up in the total books 
+
 <p> popularity :data by genre, select shows book that had highest rating ,total reviews, sale rank,</p>
 <p> data by sold by  </p>
 
