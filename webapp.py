@@ -10,6 +10,7 @@ def render_main():
 
 @app.route("/rank")
 def render_page1():
+    get_genre_options(allbooks)
     if 'rank' in request.args:
         rank=(request.args['rank'])
         return render_template('rank.html', options=get_rank_options(allbooks), fact=fact(rank))
@@ -28,6 +29,23 @@ def fact(rank):
     for  book in allbooks:
         if book[ "statistics"]["sales rank"] == int(rank):
             print( book[ "statistics"]["sales rank"])
-            return Markup(str(book [ "statistics"]["sale price"]) +  "sale price" + "<br>" + str( book [ "statistics"]["total reviews"]) + "total reviews" +"<br>" + str( book [ "statistics"]["average rating"]) + "average rating"+"<br>" + str( book[ "daily"]["publisher revenue"]+ "publisher revenue"+ "<br>" + str( book[ "daily"]["amazon revenue"]+ "amazon revenue"+ "<br>" + str( book[ "daily"]["author revenue"]+ "author revenue"+ "<br>" + str( book[ "daily"]["units sold"]+ "units sold" + "<br>" + str( book[ "daily"]["gross sales"]+ "gross sales")
+            return Markup("<h1>Statistics</h1>" + str(book [ "statistics"]["sale price"]) +  "sale price" + "<br>" + str( book [ "statistics"]["total reviews"]) + "total reviews" +"<br>" + str( book [ "statistics"]["average rating"]) + "average rating"+"<br>" + "<h1>Revenue</h1>" + str( book[ "daily"]["publisher revenue"])+ "publisher revenue"+ "<br>" + str( book[ "daily"]["amazon revenue"])+ "amazon revenue"+ "<br>" + str( book[ "daily"]["author revenue"])+ "author revenue"+ "<br>" + str( book[ "daily"]["units sold"])+ "units sold" + "<br>" + str( book[ "daily"]["gross sales"])+ "gross sales")
+          
+@app.route("/Graph")
+def render_page2():
+    return render_template('Graph.html')
+    
+def get_genre_options(allbooks):  
+    dict= { }
+    for books in allbooks:
+        if books["genre"] in dict:
+            dict [books["genre"]]= dict [books["genre"]]+1
+        else:
+            dict [books["genre"]]= 1
+
+    print(dict)
+
+
+
 if __name__=="__main__":
-    app.run(debug=False, port=54321)
+    app.run(debug=True, port=54321)

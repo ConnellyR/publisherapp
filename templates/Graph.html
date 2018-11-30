@@ -1,1 +1,59 @@
 
+{%extends "layout.html"%}
+{%set active_page="Graph"%}
+
+{% block title%}Graph{%endblock%}
+
+    {% block content%}
+ <h1>Data by Genre Pie Graph</h1>
+
+<body>
+   
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	exportEnabled: true,
+	animationEnabled: true,
+	title: {
+		text: "Desktop Browser Market Share in 2016"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 25,
+		toolTipContent: "<b>{label}</b>: {y}%",
+		showInLegend: "true",
+		legendText: "{label}",
+		indexLabelFontSize: 16,
+		indexLabel: "{label} - {y}%",
+		dataPoints: [
+			{ y: 8903, label: "genre fiction" },
+			{ y: 733, label: "fiction" },
+			{ y: 14161, label: "nonfiction" },
+			{ y: 2541, label: " children" },
+			{ y: 568, label: "comics" },
+			{ y: 121, label: "foreign language" },
+			
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
+         
+</body>
+    {%endblock%}
+
+
+    
+
