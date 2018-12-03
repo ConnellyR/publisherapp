@@ -33,19 +33,41 @@ def fact(rank):
           
 @app.route("/Graph")
 def render_page2():
-    return render_template('Graph.html')
+    return render_template('Graph.html', data=get_genre_options())
     
 def get_genre_options(allbooks):  
     dict= { }
+    total = 0
     for books in allbooks:
         if books["genre"] in dict:
             dict [books["genre"]]= dict [books["genre"]]+1
         else:
             dict [books["genre"]]= 1
-
+        total = total +1
+    print(dict )
+    print(total)
+    for  genre in dict:
+        dict[genre]=dict[genre]/total
     print(dict)
-
-
-
+    
+    for genre in dict: 
+        
+    
+			{ y: 33, label: "Genre Fiction" },
+			{ y: 3, label: "Fiction" },
+			{ y: 52, label: "Nonfiction" },
+			{ y: 9, label: " Children" },
+			{ y: 2, label: "Comics" },
+			{ y: .004, label: "Foreign Language" },
+			
+		
+    
+    
 if __name__=="__main__":
     app.run(debug=True, port=54321)
+
+    
+    
+    
+    
+    

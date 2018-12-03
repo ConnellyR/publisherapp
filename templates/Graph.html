@@ -5,7 +5,7 @@
 {% block title%}Graph{%endblock%}
 
     {% block content%}
- <h1>Data by Genre Pie Graph</h1>
+ <h1>Genres as Pie Graph</h1>
 
 <body>
    
@@ -29,15 +29,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		legendText: "{label}",
 		indexLabelFontSize: 16,
 		indexLabel: "{label} - {y}%",
-		dataPoints: [
-			{ y: 33, label: "genre fiction" },
-			{ y: 3, label: "fiction" },
-			{ y: 52, label: "nonfiction" },
-			{ y: 9, label: " children" },
-			{ y: 2, label: "comics" },
-			{ y: .004, label: "foreign language" },
-			
-		]
+		dataPoints: [{{data}}]
 	}]
 });
 chart.render();
