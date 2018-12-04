@@ -10,7 +10,7 @@ def render_main():
 
 @app.route("/rank")
 def render_page1():
-    get_genre_options(allbooks)
+    get_genre_options()
     if 'rank' in request.args:
         rank=(request.args['rank'])
         return render_template('rank.html', options=get_rank_options(allbooks), fact=fact(rank))
@@ -35,7 +35,7 @@ def fact(rank):
 def render_page2():
     return render_template('Graph.html', data=get_genre_options())
     
-def get_genre_options(allbooks):  
+def get_genre_options():  
     dict= { }
     total = 0
     for books in allbooks:
@@ -50,24 +50,17 @@ def get_genre_options(allbooks):
         dict[genre]=dict[genre]/total
     print(dict)
     
+    s=""
     for genre in dict: 
-        
-    
-			{ y: 33, label: "Genre Fiction" },
-			{ y: 3, label: "Fiction" },
-			{ y: 52, label: "Nonfiction" },
-			{ y: 9, label: " Children" },
-			{ y: 2, label: "Comics" },
-			{ y: .004, label: "Foreign Language" },
-			
-		
-    
-    
+        s= Markup(s +'{y:' + str(dict[genre]*100) +', label:' + '"' + genre + '"' + '},')
+        print(s)
+    print(s)
+    return s
 if __name__=="__main__":
     app.run(debug=True, port=54321)
 
     
     
-    
+  
     
     
