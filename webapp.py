@@ -52,7 +52,7 @@ def get_genre_options():
     
     s=""
     for genre in dict: 
-        s= Markup(s +'{y:' + str(dict[genre]*100) +', label:' + '"' + genre + '"' + '},')
+        s=s +'{y:' + str(dict[genre]*100) +', label:' + '"' + genre + '"' + '},'
         print(s)
     print(s)
     return s

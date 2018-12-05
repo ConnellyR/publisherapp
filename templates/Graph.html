@@ -29,7 +29,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		legendText: "{label}",
 		indexLabelFontSize: 16,
 		indexLabel: "{label} - {y}%",
-		dataPoints: [{{data}}]
+		dataPoints: [{{data|safe }}]
 	}]
 });
 chart.render();
@@ -38,7 +38,10 @@ chart.render();
 </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<div  class="center-div" id="chartContainer" style="height: 300px; width: 50%;"></div>
+
+
+
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>
