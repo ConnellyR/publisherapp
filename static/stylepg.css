@@ -1,5 +1,8 @@
 body{
-	background-color: rgb(32 ,90, 92 );
+	background-color: rgb(237, 225 ,186 );
+    
+    
+    color: rgb(133, 22, 50 );
 }
 .center-div
 {
@@ -7,10 +10,35 @@ body{
      width: 100px; 
 }
 
+h1
+{
+    color:rgb(32 ,90, 92 );
+    border: 4px dotted   rgb(91 ,206 ,200);
+    margin-right:700px;
+    margin-left :30px;
+}
+
+p{
+     border: 8px double  rgb(113 ,185 ,210);
+     
+     
+     
+     
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  
+  margin-right:30px;
+  margin-left:30px;
+}
 
 /*237, 225 ,186 
-133, 22, 50
-113 ,185 ,210
-91 ,206 ,200 
-32 ,90, 92 /*
+133, 22, 50 text
+113 ,185 ,210 la 1
+91 ,206 ,200 2
+32 ,90, 92  3 
+border: 12px dotted   rgb(91 ,206 ,200);
+
+/*
 
