@@ -19,19 +19,26 @@ h1
 }
 
 p{
-     border: 8px double  rgb(113 ,185 ,210);
+    
+    padding-top: 50px;  
      
-     
-     
-     
+ 
+}
+
+.abt-p
+{
+  border: 8px double  rgb(113 ,185 ,210);
+  
   padding-top: 50px;
   padding-right: 30px;
   padding-bottom: 50px;
   padding-left: 80px;
   
   margin-right:30px;
-  margin-left:30px;
+  margin-left:30px;  
+    
 }
+
 
 /*237, 225 ,186 
 133, 22, 50 text
@@ -40,5 +47,13 @@ p{
 32 ,90, 92  3 
 border: 12px dotted   rgb(91 ,206 ,200);
 
-/*
 
+
+ padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  
+  margin-right:30px;
+  margin-left:30px;
+/*

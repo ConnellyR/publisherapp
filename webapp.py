@@ -29,7 +29,7 @@ def fact(rank):
     for  book in allbooks:
         if book[ "statistics"]["sales rank"] == int(rank):
             print( book[ "statistics"]["sales rank"])
-            return Markup("<h1>Statistics</h1>" + str(book [ "statistics"]["sale price"]) +  "sale price" + "<br>" + str( book [ "statistics"]["total reviews"]) + "total reviews" +"<br>" + str( book [ "statistics"]["average rating"]) + "average rating"+"<br>" + "<h1>Revenue</h1>" + str( book[ "daily"]["publisher revenue"])+ "publisher revenue"+ "<br>" + str( book[ "daily"]["amazon revenue"])+ "amazon revenue"+ "<br>" + str( book[ "daily"]["author revenue"])+ "author revenue"+ "<br>" + str( book[ "daily"]["units sold"])+ "units sold" + "<br>" + str( book[ "daily"]["gross sales"])+ "gross sales")
+            return Markup("<h1>Statistics</h1>"  + "<p>" + str(book [ "statistics"]["sale price"]) + "</p>" +  "sale price" + "<br>" + "<p>" + str( book [ "statistics"]["total reviews"]) + "</p>" + "total reviews" +"<br>" + "<p>" + str( book [ "statistics"]["average rating"]) + "</p>" + "average rating"+"<br>" + "<h1>Revenue</h1>" + "<p>" + str( book[ "daily"]["publisher revenue"]) +"</p>"+ "publisher revenue"+ "<br>" + "<p>" + str( book[ "daily"]["amazon revenue"]) + "</p>" + "amazon revenue"+ "<br>" + "<p>" + str( book[ "daily"]["author revenue"]) + "</p>"+ "author revenue"+ "<br>" + "<p>" + str( book[ "daily"]["units sold"]) +"</p>"+ "units sold" + "<br>" + "<p>" +  str( book[ "daily"]["gross sales"]) + "</p>"+ "gross sales")
           
 @app.route("/Graph")
 def render_page2():
