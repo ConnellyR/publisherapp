@@ -14,14 +14,14 @@ h1
 {
     color:rgb(32 ,90, 92 );
     border: 4px dotted   rgb(91 ,206 ,200);
-    margin-right:700px;
+    display: inline-block;
     margin-left :30px;
 }
 
 p{
     
-    padding-top: 50px;  
-     
+    padding-left: 50px;  
+    border-style: none none solid none;
  
 }
 
