@@ -21,8 +21,9 @@ h1
 p{
     
     padding-left: 50px;  
-    border-style: none none solid none;
- 
+    border-style: none none solid none ;
+    border-color:  rgb(113 ,185 ,210);
+    display: inline-block;
 }
 
 .abt-p
@@ -48,6 +49,14 @@ p{
 border: 12px dotted   rgb(91 ,206 ,200);
 
 
+27 options 
+1-1001 1002-2003 2002-3004 3005-4005 4006-5006 5007-6007 7008-8008 8009-9009 9010-10010
+
+10011-11011 11012-12012 12013-13013 13014-14014 15015-16015 16016-17016 17017-18017
+
+ 18018-19018 19019-2001920020-21020 21021-22021 22022-23022 23023-24023 24024-25024
+ 
+ 25025-26025 26026-27027 
 
  padding-top: 50px;
   padding-right: 30px;

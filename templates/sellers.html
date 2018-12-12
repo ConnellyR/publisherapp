@@ -1,0 +1,57 @@
+{%extends "layout.html"%}
+{%set active_page="average "%}
+
+{% block title%}average{%endblock%}
+
+    {% block content%}
+ <h1>Data by average</h1>
+
+<body>
+    <form action="/average">
+      <select name="average">
+      
+       <option value= "1-1001"> 1-1001 </option>
+       <option value= "1002-2003"> 1002-2002 </option>
+       <option value= "2002-3004"> 2003-3003 </option>
+       <option value= "3005-4005"> 3004-4004 </option>
+       <option value= "4006-5006"> 4005-5006 </option>
+       <option value= "5007-6007"> 5007-6007 </option>
+       <option value= "6008-7008"> 6008-7008 </option>
+       <option value= "7009-8009"> 7009-8009 </option> ------------------------------
+       <option value= "8009-9009"> 8009-9009 </option>
+       <option value= "9010-10010"> 9010-10010 </option>
+       <option value= "10011-11011"> 10011-11011 </option>
+       <option value= "11012-12012"> 11012-12012 </option>
+       <option value= "12013-13013"> 12013-13013 </option>
+       <option value= "13014-14014"> 13014-14014 </option>
+       <option value= "15015-16015"> 15015-16015 </option>
+       <option value= "16016-17016"> 16016-17016 </option>
+       <option value= "17017-18017"> 17017-18017 </option>
+       <option value= "18018-19018"> 18018-19018 </option>
+       <option value= "19019-20019"> 19019-20019 </option>
+       <option value= "20020-21020"> 20020-21020 </option>
+       <option value= "21021-22021"> 21021-22021 </option>
+       <option value= "22022-23022"> 22022-23022 </option>
+       <option value= "23023-24023"> 23023-24023 </option>
+       <option value= "24024-25024"> 24024-25024 </option>
+       <option value= "25025-26025"> 25025-26025 </option>
+       <option value= "26026-27027"> 26026-27027 </option>
+      
+       
+
+
+
+ 
+
+ 
+
+       
+      </select>
+      <br><br>
+      <input type="submit">
+    </form>
+    {{fact}} 
+
+         
+</body>
+    {%endblock%}
