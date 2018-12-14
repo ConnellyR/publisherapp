@@ -65,4 +65,9 @@ border: 12px dotted   rgb(91 ,206 ,200);
   
   margin-right:30px;
   margin-left:30px;
+  
+  
+   if 'average' in request.args:
+        rank=(request.args['average'])
+        return render_template('average.html', info=info(average))
 /*

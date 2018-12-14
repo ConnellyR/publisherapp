@@ -51,6 +51,7 @@ def get_genre_options():
         dict[genre]=dict[genre]/total
     print(dict)
     
+    
     s=""
     for genre in dict: 
         s=s +'{y:' + str(dict[genre]*100) +', label:' + '"' + genre + '"' + '},'
@@ -59,20 +60,30 @@ def get_genre_options():
     return s
     
     
-    @app.route("/average")
+@app.route("/average")
 def render_page3():
     if 'average' in request.args:
         rank=(request.args['average'])
-        return render_template('average.html', info=info(average))
+        return render_template('average.html', info=info(rank))
     return render_template('average.html')
    
     
-def info(average):
+def info(rank):
+    rank = rank.split("-")
+    max = rank[1]
+    min = rank[0]
+    average=0
+    total= 0
+    books =0
     for  book in allbooks:
-        if book[ "statistics"]["sales rank"] == in range:
-            print( book[ "statistics"]["sales rank"])  
-    
-    
+        if book[ "statistics"]["sales price"] <= int(max) and book[ "statistics"]["sales price"] >= int(min):
+            total= total+ book[ "statistics"]["sales price"]
+            books = books + 1 
+         
+    average =total/books
+    print (average)
+    print(books)
+    return average
     
 if __name__=="__main__":
     app.run(debug=True, port=54321)
