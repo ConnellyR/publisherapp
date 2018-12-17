@@ -76,14 +76,14 @@ def info(rank):
     total= 0
     books =0
     for  book in allbooks:
-        if book[ "statistics"]["sales price"] <= int(max) and book[ "statistics"]["sales price"] >= int(min):
-            total= total+ book[ "statistics"]["sales price"]
+        if book[ "statistics"]["sales rank"] <= int(max) and book[ "statistics"]["sales rank"] >= int(min):
+            total= total+ book[ "statistics"]["sale price"]
             books = books + 1 
          
     average =total/books
     print (average)
     print(books)
-    return average
+    return Markup ( "<p>Average Sale Price of Selected Books</p>" + "<br>" + "<p>" + str(average) + "</p>")
     
 if __name__=="__main__":
     app.run(debug=True, port=54321)
