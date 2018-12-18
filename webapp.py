@@ -26,6 +26,7 @@ def get_rank_options(allbooks):
     for ranks in myList:
         options += Markup("<option value=\"" + str(ranks) + "\">" + str(ranks) + "</option>")
     return options
+    
 def fact(rank):
     for  book in allbooks:
         if book[ "statistics"]["sales rank"] == int(rank):
@@ -50,15 +51,13 @@ def get_genre_options():
     for  genre in dict:
         dict[genre]=dict[genre]/total
     print(dict)
-    
-    
+        
     s=""
     for genre in dict: 
         s=s +'{y:' + str(dict[genre]*100) +', label:' + '"' + genre + '"' + '},'
         print(s)
     print(s)
     return s
-    
     
 @app.route("/average")
 def render_page3():
