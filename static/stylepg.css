@@ -10,6 +10,19 @@ body{
      width: 100px; 
 }
 
+#info
+{
+    
+}
+
+#img
+{
+  float: right;
+  
+  width:1240px;
+  
+}
+
 h1
 {
     color:rgb(32 ,90, 92 );

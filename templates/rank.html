@@ -16,14 +16,18 @@
       <input type="submit">
     </form>
     
-    <img src=" {{url_for('static',filename='amazon.jpg')}}" alt="hi  ">
-    <br><br>
+    <div id = "img" class =row >
     <img src="{{url_for('static',filename='logo.png')}}" alt="Italian ">
+    <br><br>
+    <img src=" {{url_for('static',filename='amazon.jpg')}}" alt="hi  ">
     <br><br>
     <img src="{{url_for('static',filename='stack.jpg')}}" alt="Trulli"> 
     <br><br>
-    {{fact}}
+    </div>
     
+    <div id = "info" class =row >
+    {{fact}}
+    </div>
   
 </body>
     {%endblock%}
