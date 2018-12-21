@@ -85,7 +85,7 @@ def info(rank):
     return Markup ( "<p>Average Sale Price of Selected Books</p>" + "<br>" + "<p>" + str(average) + "</p>")
     
 if __name__=="__main__":
-    app.run(debug=True, port=54321)
+    app.run(debug=False, port=54321)
 
     
     
